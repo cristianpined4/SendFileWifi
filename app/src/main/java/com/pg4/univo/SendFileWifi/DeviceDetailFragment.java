@@ -45,10 +45,6 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- * A fragment that manages a particular peer and allows interaction with device
- * i.e. setting up network connection and transferring data.
- */
 public class DeviceDetailFragment extends Fragment implements ConnectionInfoListener {
 
     protected static final int CHOOSE_FILE_RESULT_CODE = 20;
@@ -84,7 +80,7 @@ public class DeviceDetailFragment extends Fragment implements ConnectionInfoList
 //                            public void onCancel(DialogInterface dialog) {
 //                                ((DeviceActionListener) getActivity()).cancelDisconnect();
 //                            }
-//                        }
+//
                         );
                 ((DeviceActionListener) getActivity()).connect(config);
 
@@ -105,8 +101,6 @@ public class DeviceDetailFragment extends Fragment implements ConnectionInfoList
 
                     @Override
                     public void onClick(View v) {
-                        // Allow user to pick an image from Gallery or other
-                        // registered apps
                         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                         intent.setType("image/*");
                         startActivityForResult(intent, CHOOSE_FILE_RESULT_CODE);
@@ -118,9 +112,6 @@ public class DeviceDetailFragment extends Fragment implements ConnectionInfoList
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        // User has picked an image. Transfer it to group owner i.e peer using
-        // FileTransferService.
         Uri uri = data.getData();
         TextView statusText = (TextView) mContentView.findViewById(R.id.status_text);
         statusText.setText(getResources().getText(R.string.Enviando).toString() + uri);
@@ -148,33 +139,24 @@ public class DeviceDetailFragment extends Fragment implements ConnectionInfoList
                 + ((info.isGroupOwner == true) ? getResources().getString(R.string.yes)
                         : getResources().getString(R.string.no)));
 
-        // InetAddress from WifiP2pInfo struct.
         view = (TextView) mContentView.findViewById(R.id.device_info);
         view.setText(getResources().getString(R.string.GroupOwnerIP) + info.groupOwnerAddress.getHostAddress());
 
-        // After the group negotiation, we assign the group owner as the file
-        // server. The file server is single threaded, single connection server
-        // socket.
         if (info.groupFormed && info.isGroupOwner) {
             new FileServerAsyncTask(getActivity(), mContentView.findViewById(R.id.status_text))
                     .execute();
         } else if (info.groupFormed) {
-            // The other device acts as the client. In this case, we enable the
-            // get file button.
+
             mContentView.findViewById(R.id.btn_start_client).setVisibility(View.VISIBLE);
             ((TextView) mContentView.findViewById(R.id.status_text)).setText(getResources()
                     .getString(R.string.client_text));
         }
 
-        // hide the connect button
+
         mContentView.findViewById(R.id.btn_connect).setVisibility(View.GONE);
     }
 
-    /**
-     * Updates the UI with device data
-     * 
-     * @param device the device to be displayed
-     */
+
     public void showDetails(WifiP2pDevice device) {
         this.device = device;
         this.getView().setVisibility(View.VISIBLE);
@@ -185,9 +167,7 @@ public class DeviceDetailFragment extends Fragment implements ConnectionInfoList
 
     }
 
-    /**
-     * Clears the UI fields after a disconnect or direct mode disable operation.
-     */
+
     public void resetViews() {
         mContentView.findViewById(R.id.btn_connect).setVisibility(View.VISIBLE);
         TextView view = (TextView) mContentView.findViewById(R.id.device_address);
@@ -202,19 +182,11 @@ public class DeviceDetailFragment extends Fragment implements ConnectionInfoList
         this.getView().setVisibility(View.GONE);
     }
 
-    /**
-     * A simple server socket that accepts connection and writes some data on
-     * the stream.
-     */
+
     public static class FileServerAsyncTask extends AsyncTask<Void, Void, String> {
 
         private Context context;
         private TextView statusText;
-
-        /**
-         * @param context
-         * @param statusText
-         */
         public FileServerAsyncTask(Context context, View statusText) {
             this.context = context;
             this.statusText = (TextView) statusText;

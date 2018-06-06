@@ -16,10 +16,7 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
-/**
- * A service that process each file transfer request i.e Intent by opening a
- * socket connection with the WiFi Direct Group Owner and writing the file
- */
+
 public class FileTransferService extends IntentService {
 
     private static final int SOCKET_TIMEOUT = 5000;
@@ -36,10 +33,6 @@ public class FileTransferService extends IntentService {
         super("FileTransferService");
     }
 
-    /*
-     * (non-Javadoc)
-     * @see android.app.IntentService#onHandleIntent(android.content.Intent)
-     */
     @Override
     protected void onHandleIntent(Intent intent) {
 
@@ -74,7 +67,6 @@ public class FileTransferService extends IntentService {
                         try {
                             socket.close();
                         } catch (IOException e) {
-                            // Give up
                             e.printStackTrace();
                         }
                     }
