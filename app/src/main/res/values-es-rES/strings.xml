@@ -47,4 +47,5 @@
     <string name="Connectabort">" Error al conectar la solicitud de aborto. Razón:"</string>
     <string name="P2Ppeerschanged">"Dispositivo WIFI cambiado - "</string>
     <string name="P2Pstatechanged">Estado WIFI cambiado</string>
+    <string name="oaso">Servidor Abierto</string>
 </resources>

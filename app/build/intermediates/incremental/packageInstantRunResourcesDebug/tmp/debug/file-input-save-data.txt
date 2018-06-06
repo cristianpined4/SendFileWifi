@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Wed Jun 06 17:30:20 GMT-06:00 2018
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\crist\\Documents\\GitHub\\SendFileWifi\\app\\build\\intermediates\\assets\\debug
+0.path=sample_file.txt
+0.set=ASSET
+count=1

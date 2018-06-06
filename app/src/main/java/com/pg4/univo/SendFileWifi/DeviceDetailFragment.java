@@ -241,7 +241,7 @@ public class DeviceDetailFragment extends Fragment implements ConnectionInfoList
          */
         @Override
         protected void onPreExecute() {
-            statusText.setText("Opening a server socket");
+            statusText.setText(R.string.oaso);
         }
 
     }

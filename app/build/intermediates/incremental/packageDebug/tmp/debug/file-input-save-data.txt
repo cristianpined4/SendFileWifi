@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Wed Jun 06 17:32:20 GMT-06:00 2018
+1.base=C\:\\Users\\crist\\Documents\\GitHub\\SendFileWifi\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=sample_file.txt
+0.set=ASSET
+0.base=C\:\\Users\\crist\\Documents\\GitHub\\SendFileWifi\\app\\build\\intermediates\\assets\\debug
+1.path=classes.dex

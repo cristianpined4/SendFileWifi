@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "255609371284",
+    "firebase_url": "https://sendfile-wifi.firebaseio.com",
+    "project_id": "sendfile-wifi",
+    "storage_bucket": "sendfile-wifi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255609371284:android:cb90dc865525cd1c",
+        "android_client_info": {
+          "package_name": "com.pg4.univo.SendFileWifi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255609371284-k0m8cb5v054hp748o9sohqqu18el318g.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "255609371284-k0m8cb5v054hp748o9sohqqu18el318g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApxslpLYrMWN8mYoqVIq57Qiy4Wzb4QLU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -47,4 +47,5 @@
     <string name="Abortingconnection">Aborting connection</string>
     <string name="Connectabort">Connect abort request failed. Reason Code:</string>
     <string name="P2Pstatechanged">WIFI state changed -</string>
+    <string name="oaso">Opening a server socket</string>
 </resources>

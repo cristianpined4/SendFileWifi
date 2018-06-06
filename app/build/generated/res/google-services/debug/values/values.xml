@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">255609371284-k0m8cb5v054hp748o9sohqqu18el318g.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://sendfile-wifi.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">255609371284</string>
+    <string name="google_api_key" translatable="false">AIzaSyApxslpLYrMWN8mYoqVIq57Qiy4Wzb4QLU</string>
+    <string name="google_app_id" translatable="false">1:255609371284:android:cb90dc865525cd1c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyApxslpLYrMWN8mYoqVIq57Qiy4Wzb4QLU</string>
+    <string name="google_storage_bucket" translatable="false">sendfile-wifi.appspot.com</string>
+    <string name="project_id" translatable="false">sendfile-wifi</string>
+</resources>
