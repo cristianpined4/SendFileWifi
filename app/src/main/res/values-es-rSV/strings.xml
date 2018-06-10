@@ -10,7 +10,7 @@
     <string name="no">No</string>
     <string name="client_text">" Este dispositivo actuará como un cliente. Haga clic en el botón Galería para elegir un archivo local (almacenado)"</string>
     <string name="empty_message">" No se encontraron dispositivos. Encienda WIFI y realice un descubrimiento desde la barra de Menu"</string>
-    <string name="p2p_off_warning">" Habilite P2P desde el botón de la barra de acciones arriba o la configuración del sistema"</string>
+    <string name="p2p_off_warning">" Habilite WIFI desde el botón de la barra de acciones arriba o la configuración del sistema"</string>
     <string name="group_owner_text">¿Soy el dueño del grupo?</string>
     <string name="label_me">Mi</string>
     <string name="label_peers">Dispositivos</string>
