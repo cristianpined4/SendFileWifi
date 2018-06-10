@@ -43,7 +43,7 @@
     <string name="label_peers">Dispositivos</string>
     <string name="no">No</string>
     <string name="oaso">" Apertura De Servidor"</string>
-    <string name="p2p_off_warning">" Habilite P2P desde el botón de la barra de acciones arriba o la configuración del sistema"</string>
+    <string name="p2p_off_warning">" Habilite WIFI desde el botón de la barra de acciones arriba o la configuración del sistema"</string>
     <string name="pressatras">Presione Atras Para Cancelar</string>
     <string name="servercopyingfiles">Servidor: Copiar Archivos</string>
     <string name="statud">Estado Del Dispositivo</string>
